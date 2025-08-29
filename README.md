@@ -2,59 +2,59 @@
 
 ProofVault is a decentralized application (DApp) that enables users to upload, verify, and revoke certificates securely using IPFS and the Ethereum blockchain, ensuring authenticity and immutability.
 
-✨ Features
+**✨** **Features**
 
-📤 Upload Certificates – Store certificates on IPFS and register on-chain.
+- 📤 Upload Certificates – Store certificates on IPFS and register on-chain.
 
-🔍 Verify Certificates – Check authenticity and revocation status in real-time.
+- 🔍 Verify Certificates – Check authenticity and revocation status in real-time.
 
-🚫 Revoke Certificates – Securely revoke certificates on the blockchain.
+- 🚫 Revoke Certificates – Securely revoke certificates on the blockchain.
 
-🟢 Live Dashboard – Real-time updates using smart contract events.
+- 🟢 Live Dashboard – Real-time updates using smart contract events.
 
-🔎 Search & Filter – Quickly find certificates by issuer or receiver.
+- 🔎 Search & Filter – Quickly find certificates by issuer or receiver.
 
-🎨 Modern UI/UX – Animated, scrollable, responsive, and demo-ready.
+- 🎨 Modern UI/UX – Animated, scrollable, responsive, and demo-ready.
 
-🛎️ Toaster Notifications – Elegant feedback for every action, no intrusive alerts.
+- 🛎️ Toaster Notifications – Elegant feedback for every action, no intrusive alerts.
 
-💻 Tech Stack
+**💻 Tech Stack**
 
-Frontend: React, TailwindCSS, Material UI, Ant Design, MDBReact, Framer Motion
+- Frontend: React, TailwindCSS, Material UI, Ant Design, MDBReact, Framer Motion
 
-Web3 Integration: ethers.js, web3.js, WalletConnect, Moralis
+- Web3 Integration: ethers.js, web3.js, WalletConnect, Moralis
 
-Smart Contract: Solidity (Hardhat)
+- Smart Contract: Solidity (Hardhat)
 
-Storage: IPFS (Pinata)
+- Storage: IPFS (Pinata)
 
-State Management: React Context
+- State Management: React Context
 
-📝 How It Works
+**📝 How It Works**
 
-Certificate Upload
+- Certificate Upload
 
-File is hashed (keccak256) and uploaded to IPFS.
+- File is hashed (keccak256) and uploaded to IPFS.
 
-IPFS hash + metadata are saved on-chain.
+- IPFS hash + metadata are saved on-chain.
 
-Dashboard updates automatically via smart contract events.
+- Dashboard updates automatically via smart contract events.
 
-Verification
+- Verification
 
-Fetch all certificates from the blockchain.
+- Fetch all certificates from the blockchain.
 
-Filter/search by issuer or receiver.
+- Filter/search by issuer or receiver.
 
-Display IPFS link, issuer, receiver, timestamp, and revocation status.
+- Display IPFS link, issuer, receiver, timestamp, and revocation status.
 
-Revocation
+- Revocation
 
-Certificates can be revoked securely on-chain.
+- Certificates can be revoked securely on-chain.
 
-Revocation triggers an instant dashboard update.
+- Revocation triggers an instant dashboard update.
 
-⚡ Key Achievements
+**⚡ Key Achievements**
 
 ✅ End-to-end Web3 DApp integrating React, Solidity, IPFS, Hardhat.
 
@@ -64,15 +64,11 @@ Revocation triggers an instant dashboard update.
 
 ✅ Professional, demo-ready frontend with interactive notifications and smooth animations.
 
-📌 Notes
+**📌 Notes**
 
-Currently uses local Hardhat network; avoids gas fees for live demos.
+- Currently uses local Hardhat network; avoids gas fees for live demos.
 
-Production-ready frontend deployable on Vercel/Netlify.
+- Supports multiple wallets via WalletConnect and ethers.js.
 
-Supports multiple wallets via WalletConnect and ethers.js.
-
-🖼️ Screenshots / Demo
-
-
+**🖼️ Screenshots / Demo**
 🎥 Loom Demo: Watch Here
