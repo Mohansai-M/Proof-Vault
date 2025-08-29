@@ -3,6 +3,7 @@ import { keccak256, hexlify, BrowserProvider, Contract } from "ethers";
 import axios from "axios";
 import { motion } from "framer-motion";
 import ProofVault from "../abi/ProofVault.json";
+import toast from "react-hot-toast";
 
 const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS;
 const PINATA_JWT = import.meta.env.VITE_PINATA_JWT;
@@ -51,7 +52,7 @@ export default function CertificateUploader({ wallet, onUploaded }) {
 
   const uploadCert = async () => {
     if (!wallet || !issuer || !receiver || !fileHash || !file) {
-      alert("⚠️ Please fill all fields & select a file");
+      toast.error("⚠️ Please fill all fields & select a file");
       return;
     }
 
@@ -68,7 +69,7 @@ export default function CertificateUploader({ wallet, onUploaded }) {
       });
       await tx.wait();
 
-      alert(`🎉 Certificate uploaded successfully!`);
+      toast.success(`🎉 Certificate uploaded successfully!`);
 
       setIssuer("");
       setReceiver("");
@@ -77,7 +78,7 @@ export default function CertificateUploader({ wallet, onUploaded }) {
       onUploaded?.();
     } catch (err) {
       console.error("Upload failed:", err);
-      alert("Upload failed: " + (err?.message ?? err));
+      toast.error("Upload failed: " + (err?.message ?? err));
     } finally {
       setLoading(false);
     }

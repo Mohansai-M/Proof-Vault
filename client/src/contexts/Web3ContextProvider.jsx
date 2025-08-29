@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import { ContractContext } from "./Web3Context";
 import StorageABI from "../abi/Storage.json";
+import toast from "react-hot-toast";
 
 const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS;
 
@@ -15,7 +16,7 @@ export const ContractProvider = ({ children }) => {
   const connectWallet = async () => {
     try {
       if (!window.ethereum) {
-        alert("MetaMask not detected");
+        toast.error("MetaMask not detected");
         return;
       }
 

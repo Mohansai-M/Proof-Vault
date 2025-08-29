@@ -3,6 +3,7 @@ import { ethers } from "ethers";
 import { motion } from "framer-motion";
 import ProofVault from "../abi/ProofVault.json";
 import { filterCertificates } from "./CertificateVerifier.jsx";
+import toast from "react-hot-toast";
 
 
 const CONTRACT_ADDRESS = import.meta.env.VITE_CONTRACT_ADDRESS;
@@ -55,11 +56,11 @@ export default function Dashboard({ wallet }) {
       const tx = await contract.revokeCertificate(ipfsHash);
       await tx.wait();
 
-      alert("Certificate revoked!");
+      toast.success("Certificate revoked!");
       fetchCertificates();
     } catch (err) {
       console.error("Error revoking:", err);
-      alert("Failed to revoke certificate.");
+      toast.error("Failed to revoke certificate.");
     }
   }
 
