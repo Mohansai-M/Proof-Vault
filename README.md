@@ -32,7 +32,7 @@ ProofVault is a decentralized application (DApp) that enables users to upload, v
 
 **📝 How It Works**
 
-- Certificate Upload
+📤 Certificate Upload
 
 - File is hashed (keccak256) and uploaded to IPFS.
 
@@ -40,7 +40,7 @@ ProofVault is a decentralized application (DApp) that enables users to upload, v
 
 - Dashboard updates automatically via smart contract events.
 
-- Verification
+🔍 Verification
 
 - Fetch all certificates from the blockchain.
 
@@ -48,7 +48,7 @@ ProofVault is a decentralized application (DApp) that enables users to upload, v
 
 - Display IPFS link, issuer, receiver, timestamp, and revocation status.
 
-- Revocation
+🚫 Revocation
 
 - Certificates can be revoked securely on-chain.
 
