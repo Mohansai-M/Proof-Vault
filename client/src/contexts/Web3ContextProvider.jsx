@@ -4,8 +4,7 @@ import { ethers } from "ethers";
 import { ContractContext } from "./Web3Context";
 import StorageABI from "../abi/Storage.json";
 
-// 🛠️ Replace this with your **latest** deployed address
-const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS;
 
 export const ContractProvider = ({ children }) => {
   const [provider, setProvider] = useState(null);
